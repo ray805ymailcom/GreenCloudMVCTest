@@ -1,0 +1,29 @@
+﻿@model GreenCloud.MVC.MVCSamplePage.Models.UserInput
+@{ 
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Enter number</title>
+</head>
+<body>
+    <form asp-action="NumberForm" method="post" novalidate>
+        <div asp-validation-summary="All"></div>
+        <table>
+            <tr>
+            <td><label asp-for="NumberEntered">Please enter a positive integer:</label></td>
+            <td><input asp-for="NumberEntered"/></td>
+            </tr>
+            <tr><td></td><td>@ViewBag.Result</td>
+            </tr>
+
+        <tr><td><button type="submit">Submit</button></td></tr>
+        </table>
+    </form>
+</body>
+
+</html>
